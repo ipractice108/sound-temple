@@ -249,6 +249,19 @@ p {
   padding: 8rem 2rem 4rem;
 }
 
+.hero.hero-with-image {
+  background-image: linear-gradient(rgba(44, 95, 141, 0.7), rgba(26, 58, 82, 0.8)), url('../images/services/sound-temple-detail.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero.hero-with-image h1,
+.hero.hero-with-image .subheadline {
+  color: var(--white);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 .hero-content {
   max-width: 1200px;
   text-align: center;
