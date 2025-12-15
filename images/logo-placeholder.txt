@@ -1,0 +1,17 @@
+# Logo Placeholder
+
+Please add your logo file here as `logo.png`
+
+## Requirements:
+- File name: logo.png
+- Format: PNG with transparent background
+- Recommended dimensions: 200x50px (will be scaled to max-height: 50px)
+- File size: Under 100KB recommended
+
+## Temporary Solution:
+Until you add your logo, you can:
+1. Create a simple logo using design tools like Canva or Figma
+2. Use a text-based logo temporarily
+3. Commission a professional logo design
+
+The logo will be displayed in the center of the navigation bar across all pages.
