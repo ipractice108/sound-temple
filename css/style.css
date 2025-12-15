@@ -250,7 +250,7 @@ p {
 }
 
 .hero.hero-with-image {
-  background-image: linear-gradient(rgba(44, 95, 141, 0.7), rgba(26, 58, 82, 0.8)), url('../images/services/sound-temple-detail.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('../images/services/sound-temple-detail.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
