@@ -599,8 +599,8 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    padding: 0 1rem;
+    gap: 0.5rem;
+    padding: 0 0.5rem;
   }
 
   .mobile-menu-toggle {
@@ -612,7 +612,7 @@ p {
   }
 
   .logo img {
-    max-height: 45px;
+    max-height: 40px;
   }
 
   .nav-left,
@@ -620,7 +620,7 @@ p {
     position: static;
     display: flex;
     order: 2;
-    width: auto;
+    width: 100%;
     height: auto;
     background: transparent;
     backdrop-filter: none;
@@ -637,7 +637,7 @@ p {
 
   .nav-menu {
     flex-direction: row;
-    gap: 0.4rem;
+    gap: 0.25rem;
     align-items: center;
     flex-wrap: nowrap;
     justify-content: center;
@@ -650,11 +650,11 @@ p {
   }
 
   .nav-menu li a {
-    font-size: 0.7rem;
+    font-size: 0.62rem;
     font-weight: 500;
     color: var(--dark-blue);
     white-space: nowrap;
-    padding: 0.25rem;
+    padding: 0.2rem 0.15rem;
   }
 
   .nav-link::after {
