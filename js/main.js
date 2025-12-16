@@ -45,48 +45,32 @@ document.addEventListener('DOMContentLoaded', () => {
     elementsToAnimate.forEach(el => observer.observe(el));
 });
 
-// Mobile menu toggle (for responsive version)
-const createMobileMenu = () => {
-    const navbar = document.querySelector('.navbar');
-    const navMenu = document.querySelector('.nav-menu');
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navLeft = document.querySelector('.nav-left');
+    const navRight = document.querySelector('.nav-right');
+    const navLinks = document.querySelectorAll('.nav-link');
 
-    // Create hamburger button
-    const hamburger = document.createElement('button');
-    hamburger.className = 'hamburger';
-    hamburger.innerHTML = '☰';
-    hamburger.style.display = 'none';
-    hamburger.style.fontSize = '1.5rem';
-    hamburger.style.background = 'none';
-    hamburger.style.border = 'none';
-    hamburger.style.color = 'var(--primary-blue)';
-    hamburger.style.cursor = 'pointer';
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            navLeft.classList.toggle('active');
+            navRight.classList.toggle('active');
+            document.body.style.overflow = mobileMenuToggle.classList.contains('active') ? 'hidden' : '';
+        });
 
-    // Insert hamburger into navbar
-    const navContainer = document.querySelector('.nav-container');
-    navContainer.appendChild(hamburger);
-
-    // Toggle menu on click
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-    });
-
-    // Show/hide hamburger based on screen size
-    const checkScreenSize = () => {
-        if (window.innerWidth <= 768) {
-            hamburger.style.display = 'block';
-            navMenu.style.display = navMenu.classList.contains('active') ? 'flex' : 'none';
-        } else {
-            hamburger.style.display = 'none';
-            navMenu.style.display = 'flex';
-        }
-    };
-
-    window.addEventListener('resize', checkScreenSize);
-    checkScreenSize();
-};
-
-// Initialize mobile menu
-document.addEventListener('DOMContentLoaded', createMobileMenu);
+        // Close menu when clicking on a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                navLeft.classList.remove('active');
+                navRight.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
+});
 
 // Form validation and submission
 const forms = document.querySelectorAll('form');
